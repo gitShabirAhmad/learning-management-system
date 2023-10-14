@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Learning Management System</title>
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    </head>
+    <body>  
+    
+          <!-- navbar Start -->
+    <div class="nav">
+        <div class="header_files">
+            <a href="{% url 'main' %}"><img src="{% static 'images/lms_color.png' %}"></a>
+            
+            <a href="##" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+
+        </div>
+        <ul class="nav_link">
+            <li><a href="{% url 'classes' %}">Classes</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#class">Classes</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+    </div>
+    <!-- navbar End -->
+        <script src="{% static 'js/main.js' %}"></script>
+ </body>
+ </html>
+        
