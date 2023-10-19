@@ -14,11 +14,14 @@
 
         <div class="clases">
             <h1>Classes</h1>
+            <div class="first">
 
-            <form method="GET">
-                <input type="search" name="search" placeholder="search">
-                <button type="submit">Search</button>
-            </form>
+                <form method="GET">
+                    <input type="search" name="search" placeholder="search">
+                    <button type="submit">Search</button>
+                </form>
+                <a href="{% url 'create' %}" id="add">Create</a>
+            </div>
             
             <div class="Class">
                 {% for item in course_classes %}    
@@ -36,7 +39,7 @@
                     {% endif %}
                 </div>
                 
-                <p> page {{ course_classes.number }} of {{ course_classes.paginator.num_pages }}</p>
+                <p> Page {{ course_classes.number }} of {{ course_classes.paginator.num_pages }}</p>
                 <div class="two">
                     {% if course_classes.has_next %}
                     <a href="?page={{ course_classes.next_page_number }}">Next</a>

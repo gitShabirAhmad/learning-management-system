@@ -37,6 +37,27 @@
     background-color: #fff;
     margin: 0px 0px 15px ;
 }
+.first{
+    display: flex;
+    justify-content: space-between;
+}
+#add{
+    height: 23px;
+    text-decoration:none;
+    border: 1px solid #20b90f;
+    padding: 6px 18px 0px 18px;
+    background-color: #fff;
+    font-size: 13px;
+    border-radius: 5px;
+    margin: 0px 16px 10px 0px;
+}
+#add:hover{
+    background-color: #20b90f;
+    border: 1px solid #20b90f;
+    color: #fff;
+}
+
+/* Search & Button */
 .clases button:hover{
     background-color: #5aa9e6;
     color: #fff;
@@ -127,6 +148,59 @@
     background-color: #5aa9e6;
     color: #fff;
 }
+
+
+
+/* Login Form */
+.login_container{
+    display: flex;
+    justify-content: center;
+}
+
+.login_form{
+    margin-top: 30px;
+    background-color: aliceblue;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.login_form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+.login_form input{
+    margin-bottom: 20px;
+    justify-content: center;
+    width: 250px;
+    height: 20px;
+    outline: none;
+    border: 1px solid #5aa9e6;
+    padding: 5px 6px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.login_form input[type=submit]{
+    width: 80px;
+    height: 30px;
+    margin: 14px 10px 10px 85px;
+    border: 1px solid #20b90f;
+}
+.login_form input[type=submit]:hover{
+    background-color: #20b90f;
+    color: #fff;
+    cursor: pointer;
+}
+.login_form input:hover{
+    border: 1px solid #5aa9e6;
+}
+.login_form input:focus{
+    border: 3px solid #5aa9e6;
+}
+
 @media (max-width: 1000px){
     .Class a{
         width: 300px;

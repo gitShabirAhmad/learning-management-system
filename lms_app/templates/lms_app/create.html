@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/classes.css' %}">
+    <title>LMS | Create</title>
+</head>
+<body>
+    {% include 'partials/_nav.html' %}
+    
+    <div class="login_container">
+        <div class="login_form">
+            <h2 style="text-align: center;">Create</h2>
+            {% if error == 'no' %}
+                <p style="text-align: center; color:green;">Successfully Saved</p>
+            {% endif %}
+            {% if error == 'yes' %}
+                <p style="text-align: center; color:red;">Invalid value</p>
+            {% endif %}
+            <form method="POST">
+                {% csrf_token %}
+                <label>Name</label>
+                <input type="text"  name="name">
+                <label>Time</label>
+                <input type="text"  name="time">
+                <label>Date</label>
+                <input type="text"  name="date">
+        
+                <input type="submit" value="Save">
+            </form> 
+            
+        </div>
+        
+    </div>
+
+</body>
+</html>

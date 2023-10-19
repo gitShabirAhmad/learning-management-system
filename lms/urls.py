@@ -26,4 +26,6 @@ urlpatterns = [
     path('', views.main,name='main'),
     path('classes/', views.classes,name='classes'),
     path('detail/<int:class_id>', views.detail,name='detail'),
+    path('login/', views.login,name='login'),
+    path('create/', views.create,name='create'),
 ]
