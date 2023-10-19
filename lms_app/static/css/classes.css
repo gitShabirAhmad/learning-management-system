@@ -57,6 +57,76 @@
     flex-direction: column;
     width: 800px;
 }
+
+
+
+.paginator a{
+    background-color: #5aa9e6;
+    text-decoration: none;
+    padding: 5px;
+    margin: 0px;
+    color:#fff;
+}
+.paginator p{
+    margin: 0px 5px;
+    color: #5aa9e6;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.paginator{
+    margin: 35px 15px 10px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5aa9e6;
+    height: 35px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.paginator a:focus{
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    color: #5aa9e6;
+}
+
+/* Class Info style */
+#container{
+    display: flex;
+    justify-content: center;
+}
+#info{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 700px;
+    margin-top: 20px;
+}
+#info h2{
+    margin: 10px 0px 5px 10px;
+    font-size: 20px;
+}
+#clsInfo p{
+    margin: 3px  10px;
+
+}
+.title{
+    display: flex;
+    align-items: center;
+}
+.title a{
+    text-decoration: none;
+    margin: 8px 0px 0px 10px;
+    border: 1px solid #5aa9e6;
+    padding: 3px 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #5aa9e6;
+    font-size: 14px;
+}
+.title a:hover{
+    background-color: #5aa9e6;
+    color: #fff;
+}
 @media (max-width: 1000px){
     .Class a{
         width: 300px;

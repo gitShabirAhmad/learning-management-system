@@ -19,3 +19,11 @@ def classes(request):
     course_classes = paginator.get_page(page)
 
     return render(request,'lms_app/classes.html',{"course_classes":course_classes})
+
+
+def detail(request,class_id):
+    cls_id = Cls.objects.get(id=class_id)
+    context = {'class_id':cls_id}
+    return render(request,'lms_app/detail.html',context)
+
+

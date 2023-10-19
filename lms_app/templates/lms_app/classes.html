@@ -22,22 +22,28 @@
             
             <div class="Class">
                 {% for item in course_classes %}    
-                <a href="{{item.id}}" id="class">{{item.name}} | {{item.started_date}}</a>
+                <a href="{% url 'detail' item.id %}" id="class">{{item.name}} | {{item.started_date}}</a>
                 {% endfor %}
             </div>
             
 
-            {% if course_classes.has_previous %}
-            <a href="?page=1">First</a>
-            <a href="?page={{ course_classes.previous_page_number }}">Previous</a>
-            {% endif %}
+            <div class="paginator">
+                <div class="one">
 
-            page {{ course_classes.number }} of {{ course_classes.paginator.num_pages }}
-
-            {% if course_classes.has_next %}
-            <a href="?page={{ course_classes.next_page_number }}">Next</a>
-            <a href="?page={{ course_classes.paginator.num_pages }}">Last</a>
-            {% endif %}
+                    {% if course_classes.has_previous %}
+                    <a href="?page=1">First</a>
+                    <a href="?page={{ course_classes.previous_page_number }}">Previous</a>
+                    {% endif %}
+                </div>
+                
+                <p> page {{ course_classes.number }} of {{ course_classes.paginator.num_pages }}</p>
+                <div class="two">
+                    {% if course_classes.has_next %}
+                    <a href="?page={{ course_classes.next_page_number }}">Next</a>
+                    <a href="?page={{ course_classes.paginator.num_pages }}">Last</a>
+                    {% endif %}
+                </div>
+            </div>
             
         </div>
     </div>
