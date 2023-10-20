@@ -161,6 +161,7 @@
     margin-top: 30px;
     background-color: aliceblue;
     width: 300px;
+    height: 380px;
     padding: 10px;
     border-radius: 10px;
 }
@@ -169,6 +170,40 @@
     flex-direction: column;
     justify-content: center;
     margin-left: 15px;
+    margin-top: 60px;
+}
+
+.message{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+.message p{
+    position: absolute;
+    margin: 0px;
+    font-size: 12px;
+    padding: 6px 13px;
+    border-radius: 50px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.p_shake{
+    animation: shake .6s forwards;
+}
+@keyframes shake{
+    10%{
+        transform: translateX(15px)
+    }
+    20%{
+        transform: translateX(-15px)
+    }
+    30%{
+        transform: translateX(15px)
+    }
+    50%{
+        transform: translateX(0px)
+    }   
 }
 
 .login_form input{
