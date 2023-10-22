@@ -37,6 +37,9 @@
     background-color: #fff;
     margin: 0px 0px 15px ;
 }
+
+
+/* Class Header */
 .first{
     display: flex;
     justify-content: space-between;
@@ -80,7 +83,7 @@
 }
 
 
-
+/* Pagination */
 .paginator a{
     background-color: #5aa9e6;
     text-decoration: none;
@@ -110,6 +113,7 @@
     border-radius: 6px;
     color: #5aa9e6;
 }
+
 
 /* Class Info style */
 #container{
@@ -148,6 +152,41 @@
     background-color: #5aa9e6;
     color: #fff;
 }
+
+
+/* Class info delete&update buttons */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn{
+    margin: 7px 10px 2px 0px;
+}
+#update,#delete{
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: #fff;
+    padding: 8px 15px;
+}
+#update{
+    background-color: rgb(0, 157, 255);
+    margin-right: 5px;
+}
+#update:hover{
+    background-color: rgb(0, 106, 245);
+}
+#delete{
+    background-color: red;
+}
+#delete:hover{
+    background-color: rgb(237, 0, 0);
+}
+
+
+
 
 
 
@@ -236,6 +275,11 @@
     border: 3px solid #5aa9e6;
 }
 
+
+
+
+
+
 @media (max-width: 1000px){
     .Class a{
         width: 300px;
@@ -250,5 +294,11 @@
     }
     .clases{
         width: 230px;
+    }
+    .first{
+        flex-direction: column;
+    }
+    #add{
+        width: 40px;
     }
 }

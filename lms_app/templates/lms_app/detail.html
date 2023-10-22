@@ -12,8 +12,13 @@
         {% include 'partials/_nav.html' %}
         <div id="container">
             <div id="info">
-                
-                <h2>Class Info</h2>
+                <div class="header">
+                    <h2>Class Info</h2>
+                    <div class="btn">
+                        <a href="{% url 'update' class_id.id %}" id="update">Update</a>
+                        <a href="{% url 'delete' class_id.id %}" id="delete">Delete</a>
+                    </div>    
+                </div>
                 <hr>
                 <div id="clsInfo">
                     <p><b>Class</b>  {{class_id.name}}</p>

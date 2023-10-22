@@ -1,6 +1,11 @@
 from django.shortcuts import render,redirect
 from lms_app.models import Cls
 from django.core.paginator import Paginator
+from django.contrib import messages
+from django.urls import reverse_lazy
+from django.views.generic.edit import UpdateView
+from django.views.generic.base import View
+
 # Create your views here.
 def main(request):
     return render(request,'lms_app/main.html')
@@ -45,8 +50,33 @@ def create(request):
             error = 'no'
         except:
             error = 'yes'
-            pass    
 
 
     return render(request,'lms_app/create.html',{'error':error})
+
+def delete(request,class_id):
+    if not request.user.is_staff:
+        return redirect('login')
+    cls = Cls.objects.get(id=class_id)
+    cls.delete()
+    return redirect('classes')
+
+
+def update(request,class_id):
+    if not request.user.is_staff:
+        return redirect('login')
+    clas = Cls.objects.get(id=class_id)
+    if request.method == 'GET':
+        return render(request,'lms_app/update.html',{'clas':clas})
+    else:
+        name = request.POST.get('name')    
+        time = request.POST.get('time')    
+        started = request.POST.get('date') 
+
+        clas.name = name   
+        clas.time = time   
+        clas.started_date = started
+        clas.save()
+
+        return redirect('classes')
 
